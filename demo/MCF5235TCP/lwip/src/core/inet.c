@@ -144,7 +144,7 @@ lwip_standard_chksum2(void *dataptr, int len)
 
   /* Consume left-over byte, if any */
   if (len > 0)
-    ((u8_t *)&t)[0] = *(u8_t *)ps;;
+    ((u8_t *)&t)[0] = *(u8_t *)ps;
 
   /* Add end bytes */
   sum += t;

@@ -1,5 +1,5 @@
 /* 
- * FreeModbus Libary: A portable Modbus implementation for Modbus ASCII/RTU.
+ * FreeModbus  Library:: A portable Modbus implementation for Modbus ASCII/RTU.
  * Copyright (c) 2006-2018 Christian Walter <cwalter@embedded-solutions.at>
  * All rights reserved.
  *
@@ -190,7 +190,7 @@ eMBRTUSend( UCHAR ucSlaveAddress, const UCHAR * pucFrame, USHORT usLength )
 
     ENTER_CRITICAL_SECTION(  );
 
-    /* Check if the receiver is still in idle state. If not we where to
+    /* Check if the receiver is still in idle state. If not, we were to
      * slow with processing the received frame and the master sent another
      * frame on the network. We have to abort sending the frame.
      */

@@ -1,5 +1,5 @@
 /* 
- * FreeModbus Libary: A portable Modbus implementation for Modbus ASCII/RTU.
+ * FreeModbus  Library:: A portable Modbus implementation for Modbus ASCII/RTU.
  * Copyright (c) 2006-2018 Christian Walter <cwalter@embedded-solutions.at>
  * All rights reserved.
  *
@@ -98,7 +98,7 @@ eMBFuncReadCoils( UCHAR * pucFrame, USHORT * usLen )
             *pucFrameCur++ = MB_FUNC_READ_COILS;
             *usLen += 1;
 
-            /* Test if the quantity of coils is a multiple of 8. If not last
+            /* Test if the quantity of coils is a multiple of 8. If not, last
              * byte is only partially field with unused coils set to zero. */
             if( ( usCoilCount & 0x0007 ) != 0 )
             {
@@ -125,7 +125,7 @@ eMBFuncReadCoils( UCHAR * pucFrame, USHORT * usLen )
                 /* The response contains the function code, the starting address
                  * and the quantity of registers. We reuse the old values in the 
                  * buffer because they are still valid. */
-                *usLen += ucNBytes;;
+                *usLen += ucNBytes;
             }
         }
         else

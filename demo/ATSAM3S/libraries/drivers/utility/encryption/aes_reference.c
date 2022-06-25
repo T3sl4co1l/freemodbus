@@ -734,7 +734,7 @@ int aes_ref_decrypt(const unsigned char * cipherText,
 #if defined(ENCRYPTION_ECB)
     return ecb_decrypt(cipherText, plainText, length, expandedKey);
 #elif defined(ENCRYPTION_CBC)
-    return cbc_decrypt(cipherText, plainText, length, expandedKey, IV);;
+    return cbc_decrypt(cipherText, plainText, length, expandedKey, IV);
 #elif defined(ENCRYPTION_CTR)
     return ctr_decrypt(cipherText, plainText, length, expandedKey, IV);
 #endif
@@ -755,7 +755,7 @@ int aes_ref_decrypt_CBC(const unsigned char * cipherText,
                     unsigned int length)
 {
     TRACE_DEBUG("aes_ref_decrypt_CBC\n\r");
-    return cbc_decrypt(cipherText, plainText, length, expandedKey, IV);;
+    return cbc_decrypt(cipherText, plainText, length, expandedKey, IV);
 }
 #endif
 

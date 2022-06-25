@@ -1,5 +1,5 @@
 /* 
- * FreeModbus Libary: A portable Modbus implementation for Modbus ASCII/RTU.
+ * FreeModbus  Library:: A portable Modbus implementation for Modbus ASCII/RTU.
  * Copyright (c) 2006-2018 Christian Walter <cwalter@embedded-solutions.at>
  * All rights reserved.
  *
@@ -78,7 +78,7 @@ static peMBFrameReceive peMBFrameReceiveCur;
 static pvMBFrameClose pvMBFrameCloseCur;
 
 /* Callback functions required by the porting layer. They are called when
- * an external event has happend which includes a timeout or the reception
+ * an external event has happened which includes a timeout or the reception
  * or transmission of a character.
  */
 BOOL( *pxMBFrameCBByteReceived ) ( void );
@@ -178,7 +178,7 @@ eMBInit( eMBMode eMode, UCHAR ucSlaveAddress, UCHAR ucPort, ULONG ulBaudRate, eM
         {
             if( !xMBPortEventInit(  ) )
             {
-                /* port dependent event module initalization failed. */
+                /* port dependent event module initialization failed. */
                 eStatus = MB_EPORTERR;
             }
             else
@@ -203,7 +203,7 @@ eMBTCPInit( USHORT ucTCPPort )
     }
     else if( !xMBPortEventInit(  ) )
     {
-        /* Port dependent event module initalization failed. */
+        /* Port dependent event module initialization failed. */
         eStatus = MB_EPORTERR;
     }
     else
@@ -346,7 +346,7 @@ eMBPoll( void )
         return MB_EILLSTATE;
     }
 
-    /* Check if there is a event available. If not return control to caller.
+    /* Check if there is a event available. If not, return control to caller.
      * Otherwise we will handle the event. */
     if( xMBPortEventGet( &eEvent ) == TRUE )
     {
@@ -359,7 +359,7 @@ eMBPoll( void )
             eStatus = peMBFrameReceiveCur( &ucRcvAddress, &ucMBFrame, &usLength );
             if( eStatus == MB_ENOERR )
             {
-                /* Check if the frame is for us. If not ignore the frame. */
+                /* Check if the frame is for us. If not, ignore the frame. */
                 if( ( ucRcvAddress == ucMBAddress ) || ( ucRcvAddress == MB_ADDRESS_BROADCAST ) )
                 {
                     ( void )xMBPortEventPost( EV_EXECUTE );

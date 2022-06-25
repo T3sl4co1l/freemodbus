@@ -1,5 +1,5 @@
 /*
- * FreeModbus Libary: Atmel AT91SAM3S Demo Application
+ * FreeModbus  Library:: Atmel AT91SAM3S Demo Application
  * Copyright (C) 2010 Christian Walter <cwalter@embedded-solutions.at>
  *
  * 

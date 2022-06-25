@@ -1,5 +1,5 @@
 /* 
- * FreeModbus Libary: A portable Modbus implementation for Modbus ASCII/RTU.
+ * FreeModbus  Library:: A portable Modbus implementation for Modbus ASCII/RTU.
  * Copyright (c) 2006-2018 Christian Walter <cwalter@embedded-solutions.at>
  * All rights reserved.
  *
@@ -187,7 +187,7 @@ eMBASCIISend( UCHAR ucSlaveAddress, const UCHAR * pucFrame, USHORT usLength )
     UCHAR           usLRC;
 
     ENTER_CRITICAL_SECTION(  );
-    /* Check if the receiver is still in idle state. If not we where too
+    /* Check if the receiver is still in idle state. If not, we were too
      * slow with processing the received frame and the master sent another
      * frame on the network. We have to abort sending the frame.
      */
@@ -264,7 +264,7 @@ xMBASCIIReceiveFSM( void )
                 else
                 {
                     /* not handled in Modbus specification but seems
-                     * a resonable implementation. */
+                     * a reasonable implementation. */
                     eRcvState = STATE_RX_IDLE;
                     /* Disable previously activated timer because of error state. */
                     vMBPortTimersDisable(  );
@@ -316,7 +316,7 @@ xMBASCIIReceiveFSM( void )
             /* Enable timer for character timeout. */
             vMBPortTimersEnable(  );
             /* Reset the input buffers to store the frame. */
-            usRcvBufferPos = 0;;
+            usRcvBufferPos = 0;
             eBytePos = BYTE_HIGH_NIBBLE;
             eRcvState = STATE_RX_RCV;
         }
@@ -345,7 +345,7 @@ xMBASCIITransmitFSM( void )
         break;
 
         /* Send the data block. Each data byte is encoded as a character hex
-         * stream with the high nibble sent first and the low nibble sent
+         * stream, with the high nibble sent first and the low nibble sent
          * last. If all data bytes are exhausted we send a '\r' character
          * to end the transmission. */
     case STATE_TX_DATA:
@@ -411,7 +411,7 @@ xMBASCIITimerT1SExpired( void )
 {
     switch ( eRcvState )
     {
-        /* If we have a timeout we go back to the idle state and wait for
+        /* If we have a timeout, we go back to the idle state and wait for
          * the next frame.
          */
     case STATE_RX_RCV:

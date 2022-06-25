@@ -147,7 +147,7 @@ mcf523xfec_output_raw( struct netif *netif, struct pbuf *p )
 #endif
 
 
-    /* Test if we can handle such big frames. If not drop it. */
+    /* Test if we can handle such big frames. If not, drop it. */
     if( p->tot_len > MCF_FEC_MTU )
     {
 #if LINK_STATS

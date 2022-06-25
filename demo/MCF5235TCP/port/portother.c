@@ -1,5 +1,5 @@
 /*
- * FreeModbus Libary: lwIP Port
+ * FreeModbus  Library:: lwIP Port
  * Copyright (C) 2006 Christian Walter <wolti@sil.at>
  *
  * This library is free software; you can redistribute it and/or

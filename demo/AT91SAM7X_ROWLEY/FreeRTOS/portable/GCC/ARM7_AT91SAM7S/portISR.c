@@ -146,7 +146,7 @@ vPreemptiveTick( void )
     vTaskSwitchContext(  );
 
     /* End the interrupt in the AIC. */
-    AT91C_BASE_AIC->AIC_EOICR = AT91C_BASE_PITC->PITC_PIVR;;
+    AT91C_BASE_AIC->AIC_EOICR = AT91C_BASE_PITC->PITC_PIVR;
 
     portRESTORE_CONTEXT(  );
 }

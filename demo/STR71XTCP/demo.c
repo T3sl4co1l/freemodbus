@@ -1,5 +1,5 @@
 /*
- * FreeModbus Libary: STR71XTCP Demo Application
+ * FreeModbus  Library:: STR71XTCP Demo Application
  * Copyright (C) 2006 Christian Walter <wolti@sil.at>
  *
  * This program is free software; you can redistribute it and/or modify

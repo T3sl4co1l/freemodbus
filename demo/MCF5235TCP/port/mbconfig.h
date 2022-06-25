@@ -1,5 +1,5 @@
  /*
-  * FreeModbus Libary: A portable Modbus implementation for Modbus ASCII/RTU.
+  * FreeModbus  Library:: A portable Modbus implementation for Modbus ASCII/RTU.
   * Copyright (C) 2006 Christian Walter <wolti@sil.at>
   *
   * This library is free software; you can redistribute it and/or

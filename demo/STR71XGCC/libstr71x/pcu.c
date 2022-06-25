@@ -80,7 +80,7 @@ void PCU_WFIEnter ( WFI_CLOCKS Xclock, FunctionalState Xlpr, FunctionalState Xlp
   PCU->PWRCR |= PCU_WREN_Mask;
 
   /* switched off the main Voltage Regulator in WFI mode */
-  PCU->PWRCR  |=0x0010;;
+  PCU->PWRCR  |=0x0010;
 
   /* Select the LPWFI mode */
   if (Xlpm == ENABLE )

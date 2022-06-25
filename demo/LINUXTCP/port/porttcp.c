@@ -1,5 +1,5 @@
 /*
- * FreeModbus Libary: Win32 Port
+ * FreeModbus  Library:: Win32 Port
  * Copyright (C) 2006 Christian Walter <wolti@sil.at>
  *
  * This library is free software; you can redistribute it and/or
@@ -248,7 +248,7 @@ xMBPortTCPPool( void )
                         ( void )xMBPortEventPost( EV_FRAME_RECEIVED );
                         return TRUE;
                     }
-                    /* This can not happend because we always calculate the number of bytes
+                    /* This can not happened because we always calculate the number of bytes
                      * to receive. */
                     else
                     {

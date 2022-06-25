@@ -1,5 +1,5 @@
 /*
- * FreeModbus Libary: STR71/lwIP Port serial driver.
+ * FreeModbus  Library:: STR71/lwIP Port serial driver.
  * Copyright (C) 2006 Christian Walter <wolti@sil.at>
  *
  * This library is free software; you can redistribute it and/or

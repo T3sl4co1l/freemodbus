@@ -1,5 +1,5 @@
 /*
- * FreeModbus Libary: MCF5235 Demo Application
+ * FreeModbus  Library:: MCF5235 Demo Application
  * Copyright (c) 2007 Christian Walter <wolti@sil.at>
  * All rights reserved.
  *

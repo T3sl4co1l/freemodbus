@@ -28,7 +28,7 @@
 *   pppMain now correctly exists by releasing all resources and destroying
 *   the thread.
 * 06-08-04 Christian Walter <wolti@sil.at>
-*   pppOpen code now checks if thread creation was successfull. If not returns
+*   pppOpen code now checks if thread creation was successful. If not, returns
 *   an error.
 *   pppMain now correctly closes the thread if it exists.
 * 03-01-01 Marc Boucher <marc@mbsi.ca>
